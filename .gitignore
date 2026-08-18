@@ -1,0 +1,41 @@
+# Compilacion .NET
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+artifacts/
+*.user
+*.suo
+project.lock.json
+
+# Resultados de pruebas
+[Tt]est[Rr]esult*/
+coverage*.json
+coverage*.xml
+*.trx
+
+# Entornos de desarrollo
+.vs/
+.vscode/
+.idea/
+*.swp
+
+# Secretos y configuracion local
+.env
+appsettings.Local.json
+appsettings.*.Local.json
+secrets.json
+*.pfx
+
+# NuGet
+*.nupkg
+packages/
+.nuget/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
