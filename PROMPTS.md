@@ -30,8 +30,8 @@ reinterpretarse como orden.
 El original no dice quién lee el resumen. Sin destinatario, el modelo elige un
 registro arbitrario y decide por su cuenta qué es relevante.
 
-Defino el rol —analista de seguros— y el destinatario —un ejecutivo bancario que
-necesita conocer obligaciones y coberturas—. Eso ancla el criterio de relevancia:
+Defino el rol (analista de seguros) y el destinatario (un ejecutivo bancario que
+necesita conocer obligaciones y coberturas). Eso ancla el criterio de relevancia:
 los plazos de aviso importan porque generan obligaciones para el banco.
 
 ### 1.3 Estructura de salida explícita
@@ -46,9 +46,9 @@ descripción de coberturas, y hace comparables dos ejecuciones distintas.
 Es la regla crítica. El texto contiene datos que no admiten paráfrasis:
 `$98.500.000`, `30 días calendario`, `10 días hábiles`, `50%`, `24:00`,
 `Circular Externa 028 de 2019`. Un modelo que resume tiende a redondear
-("aproximadamente 30 días") o a unificar unidades distintas —el documento usa
+("aproximadamente 30 días") o a unificar unidades distintas. El documento usa
 días calendario en un caso y días hábiles en otro, y confundirlos cambia el
-plazo real—.
+plazo real.
 
 Instruyo copiar cifras, plazos y referencias normativas **literalmente**, y
 conservar la distinción entre calendario y hábiles.
@@ -215,8 +215,8 @@ previa a ambas. El texto a resumir es una comunicación real de una aseguradora
 sobre la póliza de una persona concreta, y enviarlo a un modelo de terceros
 constituye un tratamiento de datos personales. En Colombia eso queda cubierto
 por la Ley 1581 de 2012, y tratándose de un producto asociado a un crédito
-bancario, por el régimen de la Superintendencia Financiera —incluida la misma
-Circular Externa 028 de 2019 que el documento cita—.
+bancario, por el régimen de la Superintendencia Financiera, incluida la misma
+Circular Externa 028 de 2019 que el documento cita.
 
 ### 5.1 Qué se enmascara y qué se conserva
 
@@ -290,8 +290,8 @@ seis de la sección 3.2:
    partir del contexto.
 ```
 
-Sin la regla 7, un modelo tiende a "resolver" el marcador —reemplazándolo por un
-nombre genérico como "el asegurado"— y entonces la restitución del paso 3 no
+Sin la regla 7, un modelo tiende a "resolver" el marcador, reemplazándolo por un
+nombre genérico como "el asegurado", y entonces la restitución del paso 3 no
 encuentra qué reponer.
 
 ### 5.4 Formato de los tokens
@@ -376,7 +376,7 @@ Para uso en producción, estas instrucciones se acompañan de una verificación
 automática: extraer del documento fuente las cifras, porcentajes y plazos
 mediante expresiones regulares y confirmar que cada uno aparece literalmente en
 el resumen. Es una comprobación determinista que detecta la falla más costosa
-—la alteración de un dato contractual— sin depender de otro modelo.
+(la alteración de un dato contractual) sin depender de otro modelo.
 
 La misma verificación cubre el pipeline de la sección 5: confirma que cada
 marcador introducido en el paso de tokenización aparece en el resumen y que
